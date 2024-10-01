@@ -11,4 +11,16 @@ const connectDB = async () => {
     }
 }
 
-export default connectDB
+// const connectDB = new Promise((resolve, reject) => {
+//     mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
+//     .then((connectionInstance) => {
+//         console.log(`\nMongoDB connected!! DB HOST: ${connectionInstance.connection.host}`);
+//         resolve(connectionInstance);
+//     })
+//     .catch((error) => {
+//         console.error("MONGODB connection error:", error);
+//         reject(error);
+//     });
+// })
+
+export default connectDB;
