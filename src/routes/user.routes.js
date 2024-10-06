@@ -40,7 +40,7 @@ router.route("/changeCurrentPassword").post(verifyJWT, changeCurrentPassword);
 router.route("/getCurrentUser").get(verifyJWT, getCurrentUser);
 
 router.route("/updateAccountDetails").post(verifyJWT, updateAccountDetails);
-router.route("/updateAvatar").post(verifyJWT, upload, updateAvatar);
-router.route("/updateCoverImage").post(verifyJWT, upload, updateCoverImage);
+router.route("/updateAvatar").post(verifyJWT, upload.single("avatar"), updateAvatar);
+router.route("/updateCoverImage").post(verifyJWT, upload.single("coverImage"), updateCoverImage);
 
 export default router;
